@@ -1,0 +1,162 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <Button
+        android:id="@+id/btnOpenCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open camera"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnOpenPhotoGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open photo gallery"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenCamera" />
+
+    <ImageView
+        android:id="@+id/imgTaken"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="4dp"
+        android:onClick="imageViewIsClicked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenPhotoGallery"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgTaken">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="button1isClicked"
+                android:text="Button 1"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="button2isClicked"
+                android:text="Button 2"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvWrongAnswers"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/wrong"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#FFFFFF" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnNextPlant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="button3isClicked"
+                android:text="Button 3"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:background="@drawable/button_border"
+                android:onClick="button4isClicked"
+                android:text="Button 4"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvRightAnswers"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@drawable/right"
+                android:gravity="right"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/grayScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B0000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
